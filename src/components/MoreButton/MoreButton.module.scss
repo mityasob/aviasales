@@ -1,0 +1,23 @@
+.more-button {
+  width: 502px;
+  height: 50px;
+  background-color: #2196f3;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  &:hover, :active {
+    cursor: pointer;
+  }
+
+  @media (max-width: 539px) {
+    width: 100%;
+  }
+}

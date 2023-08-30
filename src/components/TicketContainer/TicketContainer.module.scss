@@ -1,0 +1,9 @@
+.ticket-container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+
+  @media (max-width: 539px) {
+    width: 100%;
+  }
+}

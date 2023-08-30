@@ -1,0 +1,89 @@
+.ticket-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-block {
+  width: 502px;
+  min-width: 297px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.1));
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media (max-width: 539px) {
+    width: 100%;
+  }
+}
+
+.ticket-header {
+  height: 36px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.ticket-price {
+  margin-bottom: 20px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: #2196f3;
+  font-family: Open Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.ticket-description {
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.ticket-description > * {
+  width: 8.75em;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: 389px) {
+    width: auto;
+  }
+}
+
+.description-title {
+  margin: 0;
+  color: #a0b0b9;
+  font-family: Open Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.description-details {
+  margin: 0;
+  color: #4a4a4a;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+}
