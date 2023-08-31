@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { selectFilter } from "../../redux/actions";
 
 import classes from "./Filter.module.scss";
 
@@ -8,7 +9,7 @@ const Filter = ({ filterArray, onSelectFilter }) => {
     return (
       <li>
         <input key={filterArray[i].index} onChange={onSelectFilter} type='checkbox' id={filterArray[i].id} name={filterArray[i].id} checked={filterArray[i].isChecked} />
-        <label for={filterArray[i].id}>{filterArray[i].name}</label>
+        <label htmlFor={filterArray[i].id}>{filterArray[i].name}</label>
       </li>
     );
   });
@@ -25,16 +26,13 @@ const Filter = ({ filterArray, onSelectFilter }) => {
 
 function mapStateToProps(state) {
   return {
-    filterArray: state.filterArray,
+    filterArray: state.filterReducer.filterArray,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    onSelectFilter: (event) => {
-      const action = { type: "SELECT_FILTER", inputId: event.target.id, isChecked: event.target.checked };
-      dispatch(action);
-    },
+    onSelectFilter: (event) => dispatch(selectFilter(event.target.id, event.target.checked))
   };
 }
 

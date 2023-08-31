@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { selectTab } from "../../redux/actions";
 
 import classes from "./Tabs.module.scss";
 
@@ -20,16 +21,13 @@ const Tabs = ({ tabArray, onSelectTab }) => {
 
 function mapStateToProps(state) {
   return {
-    tabArray: state.tabArray,
+    tabArray: state.filterReducer.tabArray,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    onSelectTab: (event) => {
-      const action = { type: "SELECT_TAB", innerText: event.target.innerText };
-      dispatch(action);
-    },
+    onSelectTab: (event) => dispatch(selectTab(event.target.innerText))
   };
 }
 

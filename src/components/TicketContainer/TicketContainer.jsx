@@ -5,10 +5,10 @@ import Tabs from '../Tabs';
 import TicketList from '../TicketList';
 import MoreButton from '../MoreButton';
 
-const TicketContainer = (props) => {
+const TicketContainer = () => {
   return (
     <div className={classes['ticket-container']}>
-      <Tabs store={props.store} />
+      <Tabs />
       <TicketList />
       <MoreButton />
     </div>

@@ -16,7 +16,6 @@ const initialState = {
 };
 
 export const filterReducer = (state = initialState, action) => {
-  console.log(action);
   switch (action.type) {
     case SELECT_TAB:
       const newTabArray = [];
@@ -54,8 +53,6 @@ export const filterReducer = (state = initialState, action) => {
         const findUncheckedFilter = newFilterArray.find(
           (item) => item.id !== 'all' && item.isChecked === false
         );
-        console.log(newFilterArray);
-        console.log(findUncheckedFilter);
         if (!findUncheckedFilter) {
           newFilterArray[0].isChecked = true;
         }

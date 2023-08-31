@@ -5,11 +5,11 @@ import Filter from "../Filter/Filter";
 import TicketContainer from "../TicketContainer/TicketContainer";
 
 
-const Main = (props) => {
+const Main = () => {
   return (
     <div className={classes.main}>
-      <Filter store={props.store} />
-      <TicketContainer store={props.store} />
+      <Filter />
+      <TicketContainer />
     </div>
   );
 };
