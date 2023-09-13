@@ -6,20 +6,15 @@ const initialState = {
 };
 
 export const ticketsReducer = (state = initialState, action) => {
+  let ticketArray = [];
   switch (action.type) {
     case TICKETS_LOAD:
-      let ticketArray = [];
       if (state.tickets && action.data) {
         ticketArray = [...state.tickets, ...action.data.tickets];
-        return Object.assign({}, state, {
-          posts: action.data,
-          tickets: ticketArray,
-        });
-      } else {
-        return Object.assign({}, state, {
-          posts: action.data,
-        });
+        return { ...state, posts: action.data, tickets: ticketArray };
       }
+      return { ...state, posts: action.data };
+
     default:
       return state;
   }

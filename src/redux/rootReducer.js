@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+
 import { filterReducer } from './filterReducer';
 import { searchReducer } from './searchReducer';
 import { ticketsReducer } from './ticketsReducer';

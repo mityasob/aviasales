@@ -7,9 +7,7 @@ const initialState = {
 export const searchReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_SEARCH_ID:
-      return Object.assign({}, state, {
-        searchId: action.data,
-      });
+      return { ...state, searchId: action.data };
     default:
       return state;
   }

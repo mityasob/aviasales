@@ -1,10 +1,4 @@
-import {
-  SELECT_TAB,
-  SELECT_FILTER,
-  GET_SEARCH_ID,
-  TICKETS_LOAD,
-  DISPLAY_MORE,
-} from './types';
+import { SELECT_TAB, SELECT_FILTER, GET_SEARCH_ID, TICKETS_LOAD, DISPLAY_MORE } from './types';
 
 export function selectTab(innerText) {
   return {
@@ -36,9 +30,7 @@ export function getSearchId() {
 
 export function ticketsLoad(searchId) {
   return function (dispatch) {
-    fetch(
-      `https://aviasales-test-api.kata.academy/tickets?searchId=${searchId}`
-    )
+    fetch(`https://aviasales-test-api.kata.academy/tickets?searchId=${searchId}`)
       .then((res) => {
         if (res.ok) {
           return res.json();
