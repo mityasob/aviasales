@@ -1,1 +1,1 @@
-https://aviasales-futmyeujb-mityasob.vercel.app/
+https://aviasales-oqupuvvod-mityasob.vercel.app/

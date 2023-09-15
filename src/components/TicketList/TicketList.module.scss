@@ -92,3 +92,22 @@
   font-weight: 600;
   line-height: 21px;
 }
+
+.alert {
+  margin-bottom: 20px;
+  padding: 20px 0;
+  border: 2px solid red;
+  border-radius: 5px;
+  text-align: center;
+
+  span {
+    color: #4a4a4a;
+    font-family: Open Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+}

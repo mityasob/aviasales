@@ -7,8 +7,8 @@ import classes from "./Filter.module.scss";
 const Filter = ({ filterArray, onSelectFilter }) => {
   const filterList = filterArray.map((element, i) => {
     return (
-      <li>
-        <input key={filterArray[i].index} onChange={onSelectFilter} type='checkbox' id={filterArray[i].id} name={filterArray[i].id} checked={filterArray[i].isChecked} />
+      <li key={filterArray[i].index}>
+        <input onChange={onSelectFilter} type='checkbox' id={filterArray[i].id} name={filterArray[i].id} checked={filterArray[i].isChecked} />
         <label htmlFor={filterArray[i].id}>{filterArray[i].name}</label>
       </li>
     );
